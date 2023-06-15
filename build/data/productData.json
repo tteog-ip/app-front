@@ -1,0 +1,24 @@
+[
+  {
+    "id": 0,
+    "korean_name": "크리스마스 도넛",
+    "price": 4000,
+    "thumbnail_image_url": "",
+    "vegan_or_not": false,
+    "sugar_level": 1,
+    "category": "desert",
+    "description": "",
+    "url": ""
+  },
+  {
+    "id": 1,
+    "korean_name": "dummy2",
+    "price": 1000,
+    "thumbnail_image_url": "",
+    "vegan_or_not": false,
+    "sugar_level": 2,
+    "category": "desert",
+    "description": "",
+    "url": ""
+  }
+]

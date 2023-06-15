@@ -1,0 +1,33 @@
+{
+  "product_list": {
+    "category": "cake",
+    "description": "",
+    "image_list": [
+      {
+        "id": 1,
+        "url": "/images/basic.jpg"
+      },
+      {
+        "id": 2,
+        "url": "/images/oReo.jpg"
+      },
+      {
+        "id": 11,
+        "url": "/images/hazelNut.jpg"
+      },
+      {
+        "id": 12,
+        "url": "/images/favoriteCake.jpg"
+      },
+      {
+        "id": 21,
+        "url": "/images/gingerBread.jpg"
+      }
+    ],
+    "korean_name": "당근케이크",
+    "price": "7000.00",
+    "sugar_level": 5,
+    "thumbnail_image_url": "/https://pixabay.com/get/gf740fe31fe1eee20f679fc31cacc1d29385edf12e431b4f5321556db068ae54a0865d000a5076dc98b16b213f60ed1fc.jpg/",
+    "vegan_or_not": true
+  }
+}
