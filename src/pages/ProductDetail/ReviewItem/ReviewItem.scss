@@ -1,0 +1,28 @@
+@import '../../../styles/variables.scss';
+
+.reviewItem {
+  display: flex;
+  padding: 30px 0px;
+  width: 100%;
+  border-bottom: 1px solid $lightGrey;
+  color: $grey;
+  font-size: 15px;
+
+  .reviewContent {
+    flex-basis: 80%;
+    width: 100%;
+    color: $black;
+  }
+
+  .reviewAuthor {
+    flex-basis: 20%;
+    padding-left: 30px;
+    font-size: 14px;
+
+    .reviewAuthorId {
+      margin-top: 5px;
+      font-size: 15px;
+      color: $black;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../../../../styles/variables.scss';
+
+@keyframes openSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes closeSlide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.slide {
+  &.openSlide {
+    animation: openSlide 0.6s ease;
+  }
+
+  &.closeSlide {
+    animation: closeSlide 0.6s ease;
+  }
+  .imgOverflow {
+    @include flexCenter;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+
+    .slideImg {
+      object-fit: cover;
+    }
+  }
+}

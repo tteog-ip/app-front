@@ -1,0 +1,23 @@
+{
+  "order_list": [
+    {
+      "order_id": 56,
+      "user": "길도연",
+      "address": "신림",
+      "order_items": [
+        {
+          "product_id": 0,
+          "quantity": 1,
+          "product_name": "치즈케이크",
+          "price": 1000
+        },
+        {
+          "product_id": 1,
+          "quantity": 1,
+          "product_name": "딸기타르트",
+          "price": 1000
+        }
+      ]
+    }
+  ]
+}

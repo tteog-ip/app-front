@@ -1,0 +1,32 @@
+@import '../../../styles/variables.scss';
+
+.productsMain {
+  @include flexCenter(column, center);
+
+  .maskOff {
+    display: none;
+  }
+  .mask {
+    width: 110%;
+    height: 100%;
+    background-color: rgba(34, 34, 34, 0.7);
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    left: -90px;
+  }
+
+  .productListHead {
+    margin: 100px 0 70px 0;
+    color: $black;
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  .productListContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 30px 0 100px 0;
+  }
+}

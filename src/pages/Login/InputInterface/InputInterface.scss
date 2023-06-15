@@ -1,0 +1,39 @@
+@import '../../../styles/variables.scss';
+.inputInterface {
+  @include flexCenter(column);
+
+  .loginInput {
+    width: 320px;
+    height: 40px;
+    margin: 4px 0;
+    padding: 0 8px;
+    border: 1px solid $lightGrey;
+  }
+  .alertInput {
+    width: 320px;
+    height: 40px;
+    margin: 4px 0;
+    padding: 0 8px;
+    border: 1px solid red;
+  }
+
+  .loginInput {
+    &:focus {
+      border: none;
+      outline: 1px solid $veryDarkGrey;
+    }
+  }
+
+  .alertInput {
+    &:focus {
+      outline: 1px solid red;
+    }
+  }
+
+  .alertWord {
+    font-size: 12px;
+    color: red;
+    font-weight: 400;
+    padding: 4px 0 8px 0;
+  }
+}

@@ -1,0 +1,14 @@
+@import '../../../../styles/variables.scss';
+
+.imageSlide {
+  @include flexCenter(column, center);
+  position: relative;
+  width: 100%;
+
+  .slickDotWrapper {
+    @include flexCenter(row, center);
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 30px;
+  }
+}

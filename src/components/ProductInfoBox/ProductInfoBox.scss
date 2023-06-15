@@ -1,0 +1,174 @@
+@charset "utf-8";
+@import '../../styles/variables.scss';
+
+.productInfoBox {
+  width: 320px;
+  height: 574px;
+
+  .stickerWrap {
+    @include flexCenter(row, flex-start);
+
+    .stickerBest {
+      @include flexCenter;
+      width: 44px;
+      height: 20px;
+      border: 1px solid $black;
+      color: $black;
+      font-size: 10px;
+      margin-right: 5px;
+    }
+
+    .stickerVegan {
+      @include flexCenter;
+      width: 44px;
+      height: 20px;
+      border: 1px solid #33a75d;
+      color: #33a75d;
+      font-size: 10px;
+      margin-right: 5px;
+    }
+  }
+
+  .productName {
+    font-size: 32px;
+    padding: 18px 0 8px 0;
+    margin: 30px 0 70px;
+  }
+
+  .infoTag {
+    color: $grey;
+    margin: 10px 0;
+    font-size: 14px;
+  }
+
+  .price {
+    @include flexCenter(row, flex-start);
+    margin: 16px 0 80px;
+
+    .originPrice {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .originPrice {
+      &::after {
+        content: '㎡';
+        padding: 0 1px;
+      }
+    }
+  }
+
+  .tabBar {
+    @include flexCenter(row, flex-start);
+    position: relative;
+    border-bottom: 1px solid $lightGrey;
+    margin-bottom: 0px;
+
+    .infoToBuy {
+      position: absolute;
+      top: -27px;
+      background-color: $white;
+      color: $veryDarkGrey;
+      font-size: 14px;
+      padding: 8px 18px 5px;
+      border: 1px solid $lightGrey;
+      border-bottom: 0;
+      cursor: pointer;
+      z-index: 90;
+    }
+
+    .infoToBuy {
+      &:hover {
+        padding: 8px 18px 5px;
+        font-size: 14px;
+        color: $veryDarkGrey;
+        border: 1px solid $lightGrey;
+        margin-bottom: 0;
+        border-bottom: 0;
+      }
+    }
+  }
+
+  .tabContents {
+    width: 320px;
+    padding: 20px 0;
+    border-bottom: 1px solid $lightGrey;
+    font-size: 14px;
+    line-height: 20px;
+
+    .list {
+      @include flexCenter(row, flex-start);
+      height: 54px;
+      padding: 0 10px;
+      color: $veryDarkGrey;
+
+      .title {
+        width: 84px;
+        padding-left: 10px;
+      }
+
+      .definesSpecial {
+        color: $pointMint;
+        font-weight: bold;
+        padding-right: 50px;
+      }
+
+      .space {
+        &::after {
+          content: '㎡';
+          padding: 0 1px;
+        }
+      }
+    }
+  }
+
+  .totalPriceInfo {
+    @include flexCenter(row, space-between);
+    width: 320px;
+    margin: 30px 0 15px;
+    padding: 0 10px;
+    font-size: 14px;
+
+    .totalPrice {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .totalPrice {
+      &::after {
+        content: '원';
+        padding: 0 1px;
+      }
+    }
+  }
+
+  .btnWrap {
+    display: flex;
+    justify-content: space-between;
+
+    .buyBtn {
+      flex-basis: 100%;
+    }
+
+    .cartAndLikeBtn {
+      display: flex;
+
+      .likeButton {
+        width: 100%;
+        margin: 2px;
+        padding: 10px 30px;
+        border: 1px solid $black;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+        color: $black;
+
+        &.isLiked {
+          background-color: $pointPink;
+          color: $white;
+        }
+      }
+    }
+  }
+}

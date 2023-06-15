@@ -1,0 +1,17 @@
+$black: #141414;
+$white: #ffffff;
+$pointPink: #ff7371;
+$pointMint: #92d8cd;
+$pointBrown: #725c50;
+$veryDarkGrey: #585858;
+$darkGrey: #7f7f7f;
+$grey: #a8a8a8;
+$lightGrey: #cccccc;
+$veryLightGrey: #e0e0e0;
+
+@mixin flexCenter($flex-direction: center, $justify-content: center) {
+  display: flex;
+  justify-content: $justify-content;
+  flex-direction: $flex-direction;
+  align-items: center;
+}

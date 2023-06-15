@@ -1,0 +1,196 @@
+@import '../../../styles/variables.scss';
+
+@keyframes slideIn {
+  from {
+    bottom: 100px;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+.product {
+  overflow: hidden;
+  position: relative;
+  min-width: 280px;
+  margin: 10px 10px 0 10px;
+  padding: 50px 20px 30px 20px;
+
+  .stickerWrap {
+    @include flexCenter(row, flex-start);
+    position: absolute;
+    top: 20px;
+
+    .stickerBest {
+      @include flexCenter;
+      width: 44px;
+      height: 20px;
+      border: 1px solid $black;
+      color: $black;
+      font-size: 10px;
+      margin-right: 5px;
+    }
+
+    .stickerVegan {
+      @include flexCenter;
+      width: 44px;
+      height: 20px;
+      border: 1px solid #33a75d;
+      color: #33a75d;
+      font-size: 10px;
+      margin-right: 5px;
+    }
+  }
+
+  .productContainer {
+    @include flexCenter(column, space-between);
+
+    .goToProductDetail {
+      @include flexCenter(column, center);
+
+      .productImageWrapper {
+        @include flexCenter(column, center);
+        width: 230px;
+        height: 230px;
+
+        .imgBox {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+
+          .productImage {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .pdtInfo {
+        @include flexCenter(column, center);
+        width: 240px;
+        height: 130px;
+
+        .infoTag {
+          font-size: 14px;
+          color: $darkGrey;
+        }
+
+        .productName {
+          padding: 0 10px;
+          margin: 20px 0 10px 0;
+          font-size: 18px;
+          font-weight: bold;
+          color: $black;
+        }
+
+        .status {
+          padding: 0 30px;
+          margin: 5px 0 20px;
+          font-size: 15px;
+          font-weight: bold;
+          color: $black;
+        }
+      }
+    }
+
+    .productButtonContainer {
+      @include flexCenter(row, space-between);
+      opacity: 0;
+      transition: all 1s ease-in-out;
+
+      .smallBtn {
+        height: 100%;
+        margin-left: 20px;
+        border: 1px solid $black;
+
+        .productCartButton {
+          padding: 13px 15px;
+          border: none;
+          border-right: 1px solid $black;
+          cursor: pointer;
+        }
+
+        .productLikeButton {
+          padding: 13px 15px;
+          border: none;
+          cursor: pointer;
+          position: relative;
+          transition: all 0.3s ease-in-out;
+
+          &.isLiked {
+            background-color: $pointPink;
+            color: $white;
+          }
+
+          .likeNum {
+            visibility: hidden;
+            @include flexCenter;
+            width: 50px;
+            height: 20px;
+            position: absolute;
+            z-index: 9;
+          }
+
+          .div {
+            width: 10px;
+            height: 10px;
+            background-color: $lightGrey;
+            position: absolute;
+            top: 15px;
+            transform: rotate(45deg);
+            z-index: -1;
+          }
+
+          &:hover {
+            .likeNum {
+              visibility: visible;
+              @include flexCenter;
+              width: 50px;
+              height: 20px;
+              background-color: $lightGrey;
+              font-size: 11px;
+              color: $black;
+              position: absolute;
+              left: -3px;
+              top: -15px;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        animation-name: slideIn;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background-color: rgb(248, 248, 248);
+    content: '';
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+  }
+
+  &:hover {
+    &::after {
+      height: 100%;
+    }
+
+    & > .productContainer > .productButtonContainer {
+      animation-name: slideIn;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+  }
+}

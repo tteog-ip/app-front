@@ -1,0 +1,27 @@
+@import '../../../styles/variables.scss';
+
+.productListNav {
+  @include flexCenter(row, flex-start);
+  align-items: flex-end;
+  padding: 55px 60px 0px;
+
+  z-index: 100;
+
+  .productListNavContainer {
+    @include flexCenter(row, flex-start);
+    width: 100%;
+    border-bottom: 1px solid $lightGrey;
+
+    .productListNavHead {
+      margin-right: 45px;
+      padding-bottom: 20px;
+      color: $black;
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    .productListMenuContainer {
+      @include flexCenter(row);
+    }
+  }
+}

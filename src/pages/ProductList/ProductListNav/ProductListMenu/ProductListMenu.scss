@@ -1,0 +1,58 @@
+@import '../../../../styles/variables.scss';
+
+.productListMenu {
+  position: relative;
+  margin-right: 25px;
+
+  .menuButton {
+    padding-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-size: 14px;
+    font-weight: 500;
+    color: $grey;
+    transition: 0.2s;
+  }
+
+  .dropDownList {
+    position: absolute;
+    top: 47px;
+    left: -20px;
+    max-height: 0%;
+    min-width: 200%;
+    overflow: hidden;
+    background-color: $white;
+    z-index: 88;
+    transition: 0.5s ease;
+
+    .dropDownElement {
+      padding: 15px 20px;
+
+      .dropDownLink {
+        font-size: 14px;
+        color: $grey;
+        font-weight: 500;
+
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .menuButton {
+      color: $black;
+
+      &.menuDropDown {
+        border-bottom: 2px solid $black;
+      }
+    }
+
+    .dropDownList {
+      max-height: 100vh;
+      border: 0.4px solid $veryLightGrey;
+      border-top: none;
+    }
+  }
+}

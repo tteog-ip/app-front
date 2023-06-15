@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+
+.thumbnailItem {
+  width: 70px;
+  height: 70px;
+  margin: 8px;
+
+  .thumbnailBtn {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 1px solid $veryLightGrey;
+    cursor: pointer;
+
+    &.active {
+      border: 1px solid $black;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+export const TRANSELATE = {
+  all: '모든 지역',
+  seoul: '서울',
+  gyeonggi: '경기',
+  gangnam: '강남',
+  yongsan: '용산',
+  mapo: '마포',
+  nowon: '노원',
+  bucheon: '부천',
+  suwon: '수원',
+  PREPARING: '오픈 예정',
+  OPEN: '신청중',
+  CLOSED: '신청마감',
+  DONE: '신청완료',
+  SUCCESS: '당첨',
+  FAIL: '낙첨',
+};

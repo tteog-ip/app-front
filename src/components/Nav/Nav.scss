@@ -1,0 +1,187 @@
+@import '../../styles/variables.scss';
+
+.sideNav {
+  .basicNav {
+    @include flexCenter(column, space-between);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 89px;
+    padding: 18px 0;
+    background-color: #fff;
+    border-right: 1px solid $veryLightGrey;
+    z-index: 999;
+    transition: transform 0.7s ease-in;
+
+    .animationRight {
+      position: absolute;
+      transform: translateX(215px);
+      transition: all 1s ease-in-out;
+    }
+
+    &.toggledNav {
+      border-color: transparent;
+    }
+
+    .navButton {
+      @include flexCenter(column, space-between);
+      width: 40px;
+      height: 72px;
+      margin: 0 0 20px 0;
+      border-color: transparent;
+      font-size: 32px;
+      color: $black;
+      cursor: pointer;
+
+      &.home {
+        color: $black;
+      }
+
+      .description {
+        visibility: hidden;
+        @include flexCenter;
+        width: 50px;
+        height: 20px;
+        background-color: $darkGrey;
+        font-size: 11px;
+        color: $white;
+        position: relative;
+      }
+
+      .div {
+        width: 10px;
+        height: 10px;
+        background-color: $darkGrey;
+        position: absolute;
+        top: 15px;
+        transform: rotate(45deg);
+      }
+
+      &:hover {
+        .description {
+          visibility: visible;
+          @include flexCenter;
+          width: 50px;
+          height: 20px;
+          background-color: $darkGrey;
+          font-size: 11px;
+          color: $white;
+          position: relative;
+        }
+      }
+
+      &.signOut {
+        position: relative;
+        fill: $pointMint;
+        width: 45px;
+      }
+
+      &.signIn {
+        position: relative;
+        fill: $black;
+        width: 45px;
+      }
+
+      &.hamburgerBar {
+        position: fixed;
+        top: 45%;
+      }
+      .circleCart {
+        background-color: $black;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        position: absolute;
+        top: 35px;
+        right: 2px;
+
+        .cartNum {
+          font-size: 8px;
+          font-weight: bold;
+          color: $white;
+          padding-left: 2px;
+          padding-top: 1px;
+        }
+        .cartNumNone {
+          display: none;
+        }
+      }
+    }
+
+    .dummyElement {
+      width: 48px;
+      height: 48px;
+    }
+
+    .navButtonContainer {
+      @include flexCenter(column, center);
+      position: absolute;
+      bottom: 16px;
+    }
+  }
+
+  .extensionNav {
+    @include flexCenter(column, space-between);
+    position: fixed;
+    left: 88px;
+    top: 0;
+    bottom: 0;
+    width: 270px;
+    padding: 30px 0;
+    background-color: #fff;
+    border-right: 1px solid $veryLightGrey;
+    opacity: 1;
+    z-index: 998;
+    transition: all 1s ease-in-out;
+
+    &.toggledNav {
+      left: -270px;
+      opacity: 0;
+    }
+
+    .extensionNavContainer {
+      margin-left: -56px;
+
+      .tartLogo {
+        margin: 12px 0 80px 0;
+        width: 90px;
+        color: $black;
+        font-size: 38px;
+        font-weight: 900;
+      }
+
+      .extensionNavButtonWrapper {
+        padding-inline-start: 4px;
+
+        .extensionNavButton {
+          margin: 22px 0;
+          color: grey;
+          font-size: 22px;
+          font-weight: 600;
+          cursor: pointer;
+
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+  .maskOff {
+    transition: all 1s ease-in-out;
+    opacity: 0;
+
+    &.maskOn {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(34, 34, 34, 0.7);
+      z-index: 99;
+      position: fixed;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      transition: all 1s ease-in-out;
+    }
+  }
+}

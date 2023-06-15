@@ -1,0 +1,139 @@
+@import '../../../styles/variables.scss';
+
+.orderConfirm {
+  @include flexCenter(column, flex-start);
+  height: 100%;
+  padding: 0 60px;
+
+  .pageTitleArea {
+    width: 100%;
+    padding: 55px 0 40px 0;
+    position: relative;
+
+    .progressNav {
+      @include flexCenter(row, flex-end);
+      font-size: 14px;
+      color: $grey;
+
+      .progress {
+        @include flexCenter(row, flex-end);
+        border-bottom: 1px solid $lightGrey;
+
+        .step {
+          position: relative;
+          margin-left: 20px;
+          padding-bottom: 7px;
+
+          .line {
+            position: absolute;
+            content: '';
+            width: 105%;
+            bottom: -1px;
+            height: 2px;
+            background-color: black;
+          }
+        }
+      }
+    }
+
+    .pageTitle {
+      @include flexCenter;
+
+      .confirmTitle {
+        font-size: 48px;
+        margin: 110px 0 0 0;
+        text-align: center;
+      }
+    }
+  }
+
+  .pageContent {
+    @include flexCenter(column);
+    margin-top: 50px;
+    width: 100%;
+
+    .orderConfirmMessage {
+      padding-bottom: 50px;
+      font-size: 16px;
+      color: #555555;
+
+      .userName {
+        display: inline;
+        font-size: 18px;
+        color: $black;
+      }
+    }
+
+    .orderAddressMessage {
+      padding-bottom: 50px;
+      font-size: 14px;
+      color: #555555;
+
+      .address {
+        display: inline;
+        font-size: 15px;
+        color: $black;
+      }
+    }
+
+    .sheetContainer {
+      .goodsTable {
+        width: 100%;
+        margin-bottom: 20px;
+        border-top: 1px solid $black;
+
+        .goodsTableHead {
+          border-bottom: 1px solid $lightGrey;
+
+          .tableHeadElement {
+            padding: 13px 20px 11px;
+            font-size: 13px;
+
+            &.tableHeadImage {
+              width: 120px;
+            }
+
+            &.tableHeadGoods {
+              width: 230px;
+            }
+
+            &.tableHeadQuantity {
+              width: 150px;
+            }
+
+            &.tableHeadPrice {
+              width: 110px;
+            }
+
+            &.tableHeadButton {
+              width: 45px;
+            }
+          }
+        }
+      }
+    }
+
+    .totalPrice {
+      @include flexCenter(row, flex-end);
+      width: 100%;
+      padding-right: 20px;
+
+      .priceContents {
+        display: inline;
+        font-size: 16px;
+        color: #555555;
+
+        .price {
+          display: inline;
+          font-size: 20px;
+          color: $black;
+        }
+      }
+    }
+
+    .continueButtonContainer {
+      width: 40%;
+      padding-top: 40px;
+    }
+  }
+}

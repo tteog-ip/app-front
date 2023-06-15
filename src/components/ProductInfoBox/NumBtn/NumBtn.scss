@@ -1,0 +1,39 @@
+@import '../../../styles/variables.scss';
+
+.numBtn {
+  @include flexCenter(row, space-between);
+  width: 125px;
+  height: 40px;
+  border: 1px solid $lightGrey;
+
+  .aNumBtn {
+    width: 38px;
+    height: 38px;
+    border: none;
+
+    .fas {
+      color: $grey;
+    }
+  }
+
+  .aNumBtn {
+    &:hover {
+      background-color: $veryLightGrey;
+      border: none;
+    }
+  }
+
+  .numValue {
+    width: 45px;
+    height: 38px;
+    border: none;
+    text-align: center;
+    color: $darkGrey;
+  }
+
+  .numValue {
+    &:focus {
+      outline: none;
+    }
+  }
+}

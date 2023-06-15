@@ -1,0 +1,64 @@
+@import '../../../styles/variables.scss';
+
+.popUp {
+  width: 980px;
+  height: 660px;
+  padding: 40px;
+  background-color: $white;
+  position: fixed;
+  z-index: 1001;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  .closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    cursor: pointer;
+
+    .fa-times {
+      font-size: 26px;
+      color: $grey;
+    }
+
+    .fa-times {
+      &:hover {
+        transition: 0.3s ease-in-out;
+        color: $black;
+      }
+    }
+  }
+
+  .inner {
+    @include flexCenter(row, space-between);
+
+    .imageBox {
+      @include flexCenter(column, space-between);
+      width: 540px;
+      height: 574px;
+
+      .imageMain {
+        width: 540px;
+        height: 485px;
+      }
+
+      .smallImagesLine {
+        width: 64px;
+        height: 64px;
+        border: 1px solid $black;
+        cursor: pointer;
+
+        .smallImageBox {
+          height: 64px;
+
+          .smallImage {
+            width: 62px;
+            height: 62px;
+          }
+        }
+      }
+    }
+  }
+}

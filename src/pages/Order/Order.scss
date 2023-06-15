@@ -1,0 +1,210 @@
+@import '../../styles/variables.scss';
+
+.order {
+  @include flexCenter(column, flex-start);
+  height: 100%;
+  padding: 0 60px;
+
+  .pageTitleArea {
+    width: 100%;
+    padding: 55px 0 57px 0;
+    position: relative;
+
+    .progressNav {
+      @include flexCenter(row, flex-end);
+      font-size: 14px;
+      color: $grey;
+
+      .progress {
+        @include flexCenter(row, flex-end);
+        border-bottom: 1px solid $lightGrey;
+
+        .stepOne {
+          position: relative;
+          margin-right: 20px;
+          padding-bottom: 7px;
+
+          .line {
+            position: absolute;
+            content: '';
+            width: 105%;
+            bottom: -1px;
+            height: 2px;
+            background-color: black;
+          }
+        }
+
+        .stepTwo {
+          position: relative;
+          margin-right: 20px;
+          padding-bottom: 7px;
+
+          .line {
+            position: absolute;
+            content: '';
+            width: 105%;
+            bottom: -1px;
+            height: 2px;
+            background-color: black;
+          }
+        }
+
+        .stepThree {
+          position: relative;
+          padding-bottom: 7px;
+        }
+      }
+    }
+
+    .pageTitle {
+      @include flexCenter;
+
+      .orderTitle {
+        font-size: 48px;
+        margin: 110px 0 0 0;
+        text-align: center;
+      }
+    }
+  }
+
+  .pageContent {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .productSection {
+      width: 660px;
+      height: auto;
+      margin-bottom: 100px;
+
+      .goodsTable {
+        width: 100%;
+        margin-bottom: 20px;
+        border-top: 1px solid $black;
+
+        .goodsTableHead {
+          border-bottom: 1px solid $lightGrey;
+
+          .tableHeadElement {
+            padding: 13px 20px 11px;
+            font-size: 13px;
+
+            &.tableHeadImage {
+              width: 120px;
+            }
+
+            &.tableHeadGoods {
+              width: 230px;
+            }
+
+            &.tableHeadQuantity {
+              width: 150px;
+            }
+
+            &.tableHeadPrice {
+              width: 110px;
+            }
+
+            &.tableHeadButton {
+              width: 45px;
+            }
+          }
+        }
+      }
+
+      .nullContentTable {
+        @include flexCenter;
+        padding: 170px 0 170px;
+        border-top: 1px solid $black;
+        border-bottom: 1px solid $lightGrey;
+        font-size: 16px;
+        color: #555555;
+      }
+
+      .cartButtonContainer {
+        @include flexCenter(row, center);
+        width: 100%;
+
+        .cartButtonWrapper {
+          width: 26%;
+        }
+      }
+    }
+
+    .orderTotal {
+      width: 280px;
+      margin-left: 40px;
+      border: 1px solid $lightGrey;
+      border-top: 1px solid $black;
+
+      .orderInfoContainer {
+        padding: 5px 28px;
+        border-bottom: 1px solid $lightGrey;
+
+        .pdtPrice {
+          @include flexCenter(row, space-between);
+          padding: 17px 0 16px;
+          font-size: 14px;
+        }
+
+        .payPrice {
+          @include flexCenter(row, space-between);
+          padding: 17px 0 21px;
+          font-size: 14px;
+
+          .payPriceNum {
+            font-size: 20px;
+            font-weight: bold;
+          }
+        }
+
+        .selectBox {
+          @include flexCenter(row, space-between);
+          padding: 17px 0 16px;
+          font-size: 14px;
+
+          .selectedValue {
+            width: 220px;
+            height: 38px;
+            border: 1px solid $lightGrey;
+            text-align: left;
+          }
+
+          .valueList {
+            display: none;
+          }
+        }
+
+        .mustCheck {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-start;
+          padding: 15px 0 25px;
+
+          .label {
+            padding: 5px 0 0 15px;
+            font-size: 13px;
+            color: $grey;
+          }
+        }
+      }
+
+      .orderCheckButtonWrapper {
+        padding: 20px 28px;
+        background-color: #f9f9f9;
+        .hidenOrderButton{
+          display: inline-flex;
+        }
+        .hiden {
+          font-size: 12px;
+          text-align: center;
+          float: right;
+          color: #ececec;
+          cursor: default;
+          border: none;
+        }
+      }
+    }
+  }
+}
