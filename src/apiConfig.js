@@ -1,4 +1,4 @@
-const BASE_URL = 'http://127.0.0.1:8000';
+const BASE_URL = 'a242c0b307a2948f3be5f9bf864aa8da-215129755.ap-northeast-2.elb.amazonaws.com';
 
 export const API_ADDRESS = {
   product_main: `${BASE_URL}/products?region=seoul&?offset=1&limit=5`,
