@@ -1,4 +1,4 @@
-const BASE_URL = 'http://back-lb.app.svc';
+const BASE_URL = 'https://back-lb.app.svc';
 
 export const API_ADDRESS = {
   product_main: `${BASE_URL}/products?region=seoul&?offset=1&limit=5`,
