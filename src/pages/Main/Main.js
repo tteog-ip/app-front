@@ -9,7 +9,7 @@ const Main = () => {
   return (
     <div className="mainPage">
       <div className="introduce">
-        <h3 className="subTitle">떡잎마을</h3>
+        <h3 className="subTitle">떡잎마을 주택공사</h3>
         <h1 className="mainTitle">내 집 마련의 꿈,</h1>
         <h1 className="mainTitle">뉴:홈으로 해결하세요.</h1>
       </div>
