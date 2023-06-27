@@ -1,4 +1,4 @@
-const BASE_URL = 'http://172.20.59.211:8000';
+const BASE_URL = `${process.env.REACT_APP_API_URL}`;
 
 export const API_ADDRESS = {
   product_main: `${BASE_URL}/products?region=seoul&?offset=1&limit=5`,
