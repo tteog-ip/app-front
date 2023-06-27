@@ -1,4 +1,4 @@
-const BASE_URL = 
+const BASE_URL =
   'http://a93a416b9e4dc4ac98eea06360727e2a-696978128.ap-northeast-2.elb.amazonaws.com';
 
 export const API_ADDRESS = {
