@@ -23,7 +23,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'docker build --no-cache --tag 728156710202.dkr.ecr.ap-northeast-2.amazonaws.com/app-front:v$BuildNumber .'
+                sh 'docker system prune -f && docker build --force-rm --no-cache --tag 728156710202.dkr.ecr.ap-northeast-2.amazonaws.com/app-front:v$BuildNumber .'
             }
         }
     
