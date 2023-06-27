@@ -1,4 +1,4 @@
-const BASE_URL = `${process.env.REACT_APP_API_URL}`;
+const BASE_URL = 'http://back-svc.app-final:8000';
 
 export const API_ADDRESS = {
   product_main: `${BASE_URL}/products?region=seoul&?offset=1&limit=5`,
