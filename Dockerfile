@@ -9,4 +9,4 @@ RUN rm -rf /usr/share/nginx/html/index.html
 COPY --from=build /app-front/build/ /usr/share/nginx/html/
 COPY --from=build /app-front/.env /usr/share/nginx/html/
 RUN rm -rf /etc/nginx/sites-available/default
-COPY default.template /etc/nginx/sites-available/default.template
+COPY default /etc/nginx/sites-available/default
