@@ -1,5 +1,4 @@
-const BASE_URL =
-  'http://a93a416b9e4dc4ac98eea06360727e2a-696978128.ap-northeast-2.elb.amazonaws.com';
+const BASE_URL = 'http://back-svc.app-final:8000';
 
 export const API_ADDRESS = {
   product_main: `${BASE_URL}/products?region=seoul&?offset=1&limit=5`,
