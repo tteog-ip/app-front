@@ -1,4 +1,4 @@
-const BASE_URL = 'http://home.tteogip.com';
+const BASE_URL = 'https://home.tteogip.com';
 
 export const API_ADDRESS = {
   product_main: `${BASE_URL}/products?region=seoul&?offset=1&limit=5`,
